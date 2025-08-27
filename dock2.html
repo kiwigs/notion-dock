@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Dock Programación</title>
+<style>
+  body { margin:0; background:#181818; font-family:system-ui; color:#fff; }
+  h2 { text-align:center; margin:30px 0 10px; font-weight:500; color:#bbb; }
+  .grid {
+    display:grid; gap:24px; grid-template-columns: repeat(auto-fit,80px);
+    justify-content:center; padding:20px;
+  }
+  .btn {
+    width:80px; height:80px; border-radius:20px;
+    background:#242424; display:flex; align-items:center; justify-content:center;
+    box-shadow:0 4px 12px rgba(0,0,0,.4);
+    transition: transform .15s ease, background .15s ease;
+  }
+  .btn:hover { transform:scale(1.07); background:#2e2e2e; }
+  .btn img { width:48px; height:48px; }
+  .btn[data-title]{position:relative}
+  .btn[data-title]::after{
+    content:attr(data-title); position:absolute; bottom:-22px; left:50%;
+    transform:translateX(-50%); font-size:12px; color:#aaa;
+  }
+</style>
+</head>
+<body>
+  
+<div class="grid">
+  <a class="btn" data-title="FreeCodeCamp" href="https://www.freecodecamp.org" target="_blank">
+    <img src="icons/freecodecamp.png" alt="FreeCodeCamp">
+  </a>
+  <a class="btn" data-title="VS Code" href="vscode://">
+    <img src="icons/vscode.png" alt="VS Code">
+  </a>
+  <a class="btn" data-title="GitHub" href="https://github.com" target="_blank">
+    <img src="icons/github.png" alt="GitHub">
+  </a>
+  <a class="btn" data-title="FullstackOpen" href="https://fullstackopen.com/en/" target="_blank">
+    <img src="icons/fullstack.png" alt="Fullstack Open">
+  </a>
+  <a class="btn" data-title="Roadmap.sh" href="https://roadmap.sh/full-stack" target="_blank">
+    <img src="icons/roadmap.png" alt="Roadmap.sh">
+  </a>
+</div>
+
+</body>
+</html>
